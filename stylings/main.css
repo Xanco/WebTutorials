@@ -33,3 +33,13 @@
     padding: 5px 10px 5px 10px;
     min-height: 100%;
 }
+
+.helpInfo{
+    color: #adadad;
+    margin: 0px;
+}
+
+.centerText{
+    width: 100%;
+    text-align: center;
+}
