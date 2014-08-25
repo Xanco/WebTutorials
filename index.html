@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Welcome to web tutorials!</title>
+    <link rel="stylesheet" href="stylings/main.css" />
+    <link rel="stylesheet" href="stylings/code.css" />
+    <link rel="stylesheet" href="libs/prism/prism.css" />
+    <script type="text/javascript" src="libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+    <script type="text/javascript" src="libs/prism/prism.js"></script>
+    <script type="text/javascript" src="script/globalFunctions.js"></script>
+    <script type="text/javascript" src="script/codeApp.js"></script>
+
+</head>
+<body>
+    <div class="pageHeader"><h1>Muddal</h1></div>
+    <div class="pageRuler"></div>
+    <div class="mainBody">
+        <div ng-app="mainApp">
+            <div ng-controller="mainApp">
+                <div ng-show="globalInfo.coding">
+                    <h3 class="codeHeader">{{globalInfo.title}}</h3>
+                    <div class="codeFiles"><span class="codeFile" ng-repeat="file in globalInfo.files">{{file}}</span></div>
+                    <div class="codePanel">
+                        <pre class="language-{{currentScript.language}}"><code id="codeView" class="language-{{currentScript.language}}">{{currentScript.snippet}}</code></pre>
+                        <span id="codeCurrentStep">{{currentStep()}}</span>
+                        <p id="codeComments">
+                            {{currentScript.comment}}
+                        </p>
+                    </div>
+                    <div class="codeNavPanel">
+                        <button id="codeNext" class="codeButton codeNext" ng-click="nextScript()">Next</button>
+                        <button id="codePrev" class="codeButton codePrev" ng-click="prevScript()">Previous</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

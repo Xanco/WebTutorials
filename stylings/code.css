@@ -1,0 +1,63 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Questrial);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+
+@font-face {
+	src: url(http://lea.verou.me/logo.otf);
+	font-family: 'LeaVerou';
+}
+
+@font-face {
+    font-family: codeFont;
+    src: url(fonts/SourceCodePro.woff);
+}
+
+#code{
+    font-family: codeFont;
+}
+
+#codeComments{
+    
+}
+
+.codeHeader{
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
+
+.codeButton{
+    width: 150px;
+    height: 50px;
+    border: 0px;
+    font-family: "Open Sans";
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.codeFile{
+    margin: 5px 2px 5px 2px;
+    padding: 5px 2px 5px 2px;
+}
+
+.codeFile:hover{
+    background-color: #ffeca2;
+    cursor: pointer;
+}
+
+.codeFileActive{
+    background-color: #ffeca2;
+}
+
+.codeNext{
+    float: right;
+    background-color: #3ed846;
+}
+
+.codePrev{
+    float: left;
+    background-color: #3ed846;
+}
+
+.codeNavPanel{
+    height: 75px;
+}
