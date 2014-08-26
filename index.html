@@ -20,7 +20,7 @@
             <div ng-controller="mainApp">
                 <div ng-show="globalInfo.coding">
                     <h3 class="codeHeader">{{globalInfo.title}}</h3>
-                    <div class="codeFiles"><span class="codeFile" ng-repeat="file in globalInfo.files">{{file}}</span></div>
+                    <div class="codeFiles"><span class="codeFile" ng-repeat="file in fileStates">{{file.filename}}</span></div>
                     <div class="codePanel">
                         <pre class="language-{{currentScript.language}}"><code id="codeView" class="language-{{currentScript.language}}">{{currentScript.snippet}}</code></pre>
                         <span id="codeCurrentStep">{{currentStep()}}</span>

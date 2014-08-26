@@ -34,7 +34,7 @@ mainApp.controller('mainApp', function ($scope) {
         "snippet": $scope.Script[0].snippet,
         "comment": $scope.Script[0].comment,
         "language": $scope.Script[0].language
-    };
+    }
 
     $scope.globalInfo = {
         "title": "Writing to console in JavaScript",
@@ -42,6 +42,11 @@ mainApp.controller('mainApp', function ($scope) {
         "files": ["index.html", "javascript.js"]
     };
 
+    $scope.fileStates = {}
+    $scope.Script.forEach(function(file){
+        $scope.fileStates.push({ "filename": file.filename, "language": file.language, "content": ""});
+    });
+    
     step = 0;
     $scope.nextScript = function () {
         if (step < objLengthAccurate($scope.Script)) {
@@ -81,11 +86,6 @@ $(document).keydown(function (e) {
             break;
 
     }
-});
-
-$(".codePanel").on("change", function () {
-    console.log("CHANGED!");
-    Prism.highlightAll();
 });
 
 
